@@ -32,9 +32,10 @@ npm run dev
 2. Use the project ID and dataset name in `.env.local`.
 3. Start the Studio at `/studio`.
 
-## Contact
+## Contact Form (Resend)
 
-The contact page uses a `mailto:` link pointing to `contact@mubinaraza.com`.
+1. Create a Resend API key and verify `mubinaraza.com`.
+2. Set `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, and `CONTACT_FROM_EMAIL` in `.env.local`.
 
 ## Deployment
 
