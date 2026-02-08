@@ -5,10 +5,10 @@ import type { SpeakingEngagement } from "@/lib/types";
 export const revalidate = 60;
 
 const topics = [
-  "AI product strategy and platform design",
-  "Human-centered automation",
-  "Building ventures with constraints",
-  "Scaling cross-functional collaboration",
+  "AI & Machine Learning: Applied and responsible approaches to AI and machine learning, from strategic framing to production deployment.",
+  "Emerging Technologies: Evaluating and integrating emerging technologies in ways that create real organizational value.",
+  "Leadership in Complex Systems: Leading teams and initiatives in environments defined by scale, ambiguity, and change.",
+  "Equity in the Workplace: Building inclusive systems and cultures that support sustained performance and innovation.",
 ];
 
 export default async function SpeakingPage() {
@@ -29,7 +29,9 @@ export default async function SpeakingPage() {
           Conversations and workshops
         </h1>
         <p className="max-w-2xl text-secondary">
-          Topics and recordings update from the CMS.
+          I speak on technology, leadership, and equity with a focus on applied
+          insight. My perspective is shaped by hands-on experience leading
+          complex initiatives and translating ideas into execution.
         </p>
       </section>
 
@@ -87,6 +89,12 @@ export default async function SpeakingPage() {
             </article>
           ))}
         </div>
+        <a
+          href="/contact"
+          className="inline-flex w-fit items-center justify-center rounded-full border border-muted px-5 py-2 text-sm font-semibold text-primary transition hover:border-accent"
+        >
+          Book Me to Speak
+        </a>
       </section>
     </div>
   );
