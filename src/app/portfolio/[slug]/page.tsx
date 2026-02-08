@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react";
-import type { ReactNode } from "react";
+import type { PortableTextComponents } from "@portabletext/react";
 import ProjectHero from "@/components/ProjectHero";
 import { sanityClient } from "@/lib/sanity.client";
 import {
@@ -16,24 +16,23 @@ type PageProps = {
   params: { slug: string };
 };
 
-const portableTextComponents = {
+const portableTextComponents: PortableTextComponents = {
   block: {
-    normal: ({ children }: { children: ReactNode }) => (
-      <p className="text-secondary">{children}</p>
-    ),
+    normal: ({ children }) =>
+      children ? <p className="text-secondary">{children}</p> : null,
   },
   list: {
-    bullet: ({ children }: { children: ReactNode }) => (
-      <ul className="space-y-2 text-secondary">{children}</ul>
-    ),
+    bullet: ({ children }) =>
+      children ? <ul className="space-y-2 text-secondary">{children}</ul> : null,
   },
   listItem: {
-    bullet: ({ children }: { children: ReactNode }) => (
-      <li className="flex gap-2">
-        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
-        <span>{children}</span>
-      </li>
-    ),
+    bullet: ({ children }) =>
+      children ? (
+        <li className="flex gap-2">
+          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
+          <span>{children}</span>
+        </li>
+      ) : null,
   },
 };
 
