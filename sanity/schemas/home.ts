@@ -46,5 +46,4 @@ export default defineType({
       type: "url",
     }),
   ],
-  __experimental_actions: ["update", "publish"],
 });
