@@ -32,6 +32,16 @@ npm run dev
 2. Use the project ID and dataset name in `.env.local`.
 3. Start the Studio at `/studio`.
 
+## Seed Content
+
+To seed the CMS automatically, set `SANITY_WRITE_TOKEN` in your terminal and run:
+
+```bash
+npm run seed
+```
+
+Do not commit the token.
+
 ## Contact Form (Resend)
 
 1. Create a Resend API key and verify `mubinaraza.com`.

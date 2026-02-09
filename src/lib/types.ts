@@ -57,6 +57,11 @@ export type SpeakingEngagement = {
   title: string;
   description?: string;
   youtubeUrl?: string;
+  videoFile?: {
+    asset?: {
+      url?: string;
+    };
+  };
   playlist?: boolean;
   featured?: boolean;
   order?: number;
@@ -70,4 +75,25 @@ export type HomeData = {
   ctaPrimaryUrl?: string;
   ctaSecondaryLabel?: string;
   ctaSecondaryUrl?: string;
+  valuePillars?: { title: string; body: string }[];
+  featuredWorkCopy?: string;
+  featuredWorkCtaLabel?: string;
+  speakingPreviewCopy?: string;
+  speakingPreviewCtaLabel?: string;
+};
+
+export type ExperiencePageData = {
+  overview?: string;
+};
+
+export type SpeakingPageData = {
+  profile?: string;
+  topics?: { title: string; description: string }[];
+  ctaLabel?: string;
+};
+
+export type ContactPageData = {
+  body?: string;
+  email?: string;
+  linkedinUrl?: string;
 };

@@ -45,5 +45,52 @@ export default defineType({
       title: "Secondary CTA URL",
       type: "url",
     }),
+    defineField({
+      name: "valuePillars",
+      title: "Value Pillars",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            defineField({
+              name: "title",
+              title: "Title",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: "body",
+              title: "Body",
+              type: "text",
+              rows: 4,
+              validation: (Rule) => Rule.required(),
+            }),
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: "featuredWorkCopy",
+      title: "Featured Work Copy",
+      type: "text",
+      rows: 3,
+    }),
+    defineField({
+      name: "featuredWorkCtaLabel",
+      title: "Featured Work CTA Label",
+      type: "string",
+    }),
+    defineField({
+      name: "speakingPreviewCopy",
+      title: "Speaking Preview Copy",
+      type: "text",
+      rows: 3,
+    }),
+    defineField({
+      name: "speakingPreviewCtaLabel",
+      title: "Speaking Preview CTA Label",
+      type: "string",
+    }),
   ],
 });

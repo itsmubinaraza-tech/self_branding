@@ -24,6 +24,12 @@ export default defineType({
       description: "Use the embed URL, e.g. https://www.youtube.com/embed/...",
     }),
     defineField({
+      name: "videoFile",
+      title: "Video File",
+      type: "file",
+      options: { accept: "video/*" },
+    }),
+    defineField({
       name: "playlist",
       title: "Playlist",
       type: "boolean",

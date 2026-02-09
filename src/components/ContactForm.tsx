@@ -5,7 +5,12 @@ import type { FormEvent } from "react";
 
 type FormState = "idle" | "sending" | "success" | "error";
 
-export default function ContactForm() {
+type ContactFormProps = {
+  email?: string;
+  linkedinUrl?: string;
+};
+
+export default function ContactForm({ email, linkedinUrl }: ContactFormProps) {
   const [state, setState] = useState<FormState>("idle");
   const [message, setMessage] = useState<string | null>(null);
 
@@ -94,6 +99,22 @@ export default function ContactForm() {
       >
         {state === "sending" ? "Sending..." : "Send message"}
       </button>
+      {email ? (
+        <a
+          href={`mailto:${email}`}
+          className="text-sm text-secondary underline decoration-muted underline-offset-4 hover:text-accent"
+        >
+          {email}
+        </a>
+      ) : null}
+      {linkedinUrl ? (
+        <a
+          href={linkedinUrl}
+          className="text-sm text-secondary underline decoration-muted underline-offset-4 hover:text-accent"
+        >
+          LinkedIn
+        </a>
+      ) : null}
       {message ? (
         <p
           aria-live="polite"

@@ -7,7 +7,28 @@ export const homeQuery = groq`*[_type == "home"][0]{
   ctaPrimaryLabel,
   ctaPrimaryUrl,
   ctaSecondaryLabel,
-  ctaSecondaryUrl
+  ctaSecondaryUrl,
+  valuePillars,
+  featuredWorkCopy,
+  featuredWorkCtaLabel,
+  speakingPreviewCopy,
+  speakingPreviewCtaLabel
+}`;
+
+export const experiencePageQuery = groq`*[_type == "experiencePage"][0]{
+  overview
+}`;
+
+export const speakingPageQuery = groq`*[_type == "speakingPage"][0]{
+  profile,
+  topics,
+  ctaLabel
+}`;
+
+export const contactPageQuery = groq`*[_type == "contactPage"][0]{
+  body,
+  email,
+  linkedinUrl
 }`;
 
 export const featuredProjectsQuery = groq`*[_type == "project" && featured == true && published == true] | order(order asc, _createdAt desc){
@@ -67,6 +88,7 @@ export const speakingEngagementsQuery = groq`*[_type == "speakingEngagement"] | 
   title,
   description,
   youtubeUrl,
+  videoFile{asset->{url}},
   playlist,
   featured,
   order
