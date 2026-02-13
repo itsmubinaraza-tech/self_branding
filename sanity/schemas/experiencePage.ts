@@ -6,6 +6,12 @@ export default defineType({
   type: "document",
   fields: [
     defineField({
+      name: "heading",
+      title: "Page Heading",
+      type: "string",
+      validation: (Rule) => Rule.required().max(100),
+    }),
+    defineField({
       name: "overview",
       title: "Overview",
       type: "text",

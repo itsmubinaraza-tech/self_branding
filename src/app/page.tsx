@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ProjectGrid from "@/components/ProjectGrid";
+import ImageCarousel from "@/components/ImageCarousel";
 import { sanityClient } from "@/lib/sanity.client";
 import { featuredProjectsQuery, homeQuery } from "@/lib/sanity.queries";
 import type { HomeData, Project } from "@/lib/types";
@@ -47,6 +48,10 @@ export default async function Home() {
           ) : null}
         </div>
       </section>
+
+      {home?.carousel?.length ? (
+        <ImageCarousel slides={home.carousel} />
+      ) : null}
 
       {home?.valuePillars?.length ? (
         <section className="grid gap-6 md:grid-cols-2">

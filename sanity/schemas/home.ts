@@ -92,5 +92,44 @@ export default defineType({
       title: "Speaking Preview CTA Label",
       type: "string",
     }),
+    defineField({
+      name: "carousel",
+      title: "Personal Image Carousel",
+      type: "array",
+      description: "Personal photos with quotes (3-5 images)",
+      validation: (Rule) => Rule.max(5),
+      of: [
+        {
+          type: "object",
+          fields: [
+            defineField({
+              name: "image",
+              title: "Image",
+              type: "image",
+              options: { hotspot: true },
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: "alt",
+              title: "Alt Text",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: "tagline",
+              title: "Tagline / Quote",
+              type: "text",
+              rows: 2,
+            }),
+            defineField({
+              name: "attribution",
+              title: "Attribution",
+              type: "string",
+              description: "Quote attribution (e.g., author name)",
+            }),
+          ],
+        },
+      ],
+    }),
   ],
 });

@@ -55,9 +55,9 @@ async function run() {
     _id: "home",
     _type: "home",
     heroHeadline:
-      "Co-creating scalable solutions from strategy through execution.",
+      "I co-create scalable systems that move from vision to measurable impact.",
     heroSubhead:
-      "I am a technology and transformation leader who partners with stakeholders to design, build, and operationalize complex systems. My work sits at the intersection of strategy, execution, and collaboration—ensuring ideas are not only well-conceived, but implemented, adopted, and sustained.",
+      "As a strategic, results-driven technology leader, I bring clarity to complexity and translate ambition into execution. Through collaborative partnership, disciplined implementation, and empathetic leadership, I build solutions that protect, empower, and elevate the people and organizations I serve.",
     ctaPrimaryLabel: "Explore My Work",
     ctaPrimaryUrl: "/portfolio",
     valuePillars: [
@@ -92,11 +92,38 @@ async function run() {
     speakingPreviewCopy:
       "I regularly speak on technology leadership, AI and machine learning, emerging technologies, and equity in the workplace—grounded in executional experience rather than theory alone.",
     speakingPreviewCtaLabel: "Watch Talks",
+    carousel: [
+      {
+        _key: "carousel-1",
+        _type: "object",
+        image: null, // Replace with uploaded image asset
+        alt: "Personal photo",
+        tagline: "Leadership is not about being in charge. It is about taking care of those in your charge.",
+        attribution: "Simon Sinek",
+      },
+      {
+        _key: "carousel-2",
+        _type: "object",
+        image: null, // Replace with uploaded image asset
+        alt: "Family photo",
+        tagline: "The strength of the team is each individual member. The strength of each member is the team.",
+        attribution: "Phil Jackson",
+      },
+      {
+        _key: "carousel-3",
+        _type: "object",
+        image: null, // Replace with uploaded image asset
+        alt: "Travel photo",
+        tagline: "Travel is fatal to prejudice, bigotry, and narrow-mindedness.",
+        attribution: "Mark Twain",
+      },
+    ],
   };
 
   const experiencePageDoc = {
     _id: "experiencePage",
     _type: "experiencePage",
+    heading: "Enterprise Leadership & Execution",
     overview:
       "I bring experience leading large-scale technology and transformation initiatives across complex, regulated, and high-stakes environments. My work spans enterprise architecture, data and AI enablement, infrastructure modernization, and organizational leadership, with a consistent emphasis on collaboration, execution, and measurable outcomes.",
   };

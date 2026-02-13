@@ -18,7 +18,7 @@ export default async function ExperiencePage() {
           Experience
         </p>
         <h1 className="text-4xl font-semibold md:text-5xl">
-          Work without employer labels
+          {page?.heading ?? "Enterprise Leadership & Execution"}
         </h1>
         {page?.overview ? (
           <p className="max-w-2xl text-secondary">{page.overview}</p>

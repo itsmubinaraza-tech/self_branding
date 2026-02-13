@@ -6,6 +6,12 @@ export type SanityImage = {
     _ref?: string;
     _type?: "reference";
   };
+  hotspot?: {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  };
 };
 
 export type SanityFile = {
@@ -67,6 +73,14 @@ export type SpeakingEngagement = {
   order?: number;
 };
 
+export type CarouselSlide = {
+  _key: string;
+  image: SanityImage;
+  alt: string;
+  tagline?: string;
+  attribution?: string;
+};
+
 export type HomeData = {
   heroEyebrow?: string;
   heroHeadline?: string;
@@ -80,9 +94,11 @@ export type HomeData = {
   featuredWorkCtaLabel?: string;
   speakingPreviewCopy?: string;
   speakingPreviewCtaLabel?: string;
+  carousel?: CarouselSlide[];
 };
 
 export type ExperiencePageData = {
+  heading?: string;
   overview?: string;
 };
 

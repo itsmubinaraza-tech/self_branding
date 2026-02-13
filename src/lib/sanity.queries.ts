@@ -12,10 +12,12 @@ export const homeQuery = groq`*[_type == "home"][0]{
   featuredWorkCopy,
   featuredWorkCtaLabel,
   speakingPreviewCopy,
-  speakingPreviewCtaLabel
+  speakingPreviewCtaLabel,
+  carousel[]{ _key, image, alt, tagline, attribution }
 }`;
 
 export const experiencePageQuery = groq`*[_type == "experiencePage"][0]{
+  heading,
   overview
 }`;
 
