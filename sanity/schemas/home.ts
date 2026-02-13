@@ -33,7 +33,8 @@ export default defineType({
     defineField({
       name: "ctaPrimaryUrl",
       title: "Primary CTA URL",
-      type: "url",
+      type: "string",
+      description: "Relative path (e.g., /portfolio) or full URL",
     }),
     defineField({
       name: "ctaSecondaryLabel",
@@ -43,7 +44,8 @@ export default defineType({
     defineField({
       name: "ctaSecondaryUrl",
       title: "Secondary CTA URL",
-      type: "url",
+      type: "string",
+      description: "Relative path (e.g., /contact) or full URL",
     }),
     defineField({
       name: "valuePillars",
